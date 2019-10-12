@@ -1,0 +1,22 @@
+<h3>Editar pessoa</h3>
+
+<div *ngIf="person">
+  <label>Nome
+    <input placeholder="Insira seu nome" [(ngModel)]="person.nome">
+  </label>
+  <br>
+  <label>Caráter
+    <input placeholder="Insira seu caráter" [(ngModel)]="person.tipoPessoa">
+  </label>
+  <br>
+  <label>E-mail
+    <input placeholder="Insira seu e-mail" [(ngModel)]="person.email">
+  </label>
+  <br>
+  <label>Senha
+    <input placeholder="Insira sua senha" [(ngModel)]="person.senha">
+  </label>
+  <br>
+  <button (click)="update()">Salvar</button>
+  <button (click)="cancel()">Calcelar</button>
+</div>

@@ -1,0 +1,19 @@
+<h3>Pessoas</h3>
+
+<table *ngIf="people">
+  <thead>
+    <td>ID</td>
+    <td>Nome</td>
+    <td>Caráter</td>
+    <td>E-mail</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{person.id}}</td>
+      <td>{{person.nome}}</td>
+      <td>{{person.tipoPessoa}}</td>
+      <td>{{person.email}}</td>
+    </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,49 @@
+<h3>Documentos</h3>
+
+<table *ngIf="documents">
+  <thead>
+    <td>ID</td>
+    <td>Título</td>
+    <td>Sub-título</td>
+    <td>Nível escolar</td>
+    <td>Cidade</td>
+    <td>Curso</td>
+    <td>Instituição</td>
+    <td>Sigla da Instituição</td>
+    <td>Título acadêmico</td>
+    <td>Pré-ambulo</td>
+    <td>Ficha catalográfica</td>
+    <td>Dedicatória</td>
+    <td>Epígrafe</td>
+    <td>Resumo</td>
+    <td>Abstract</td>
+    <td>Agradecimentos</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let document of documents">
+      <td>{{document.id}}</td>
+      <td>{{document.titulo}}</td>
+      <td>{{document.subTitulo}}</td>
+      <td>{{document.nivelEscolar}}</td>
+      <!--pessoas:Person[]-->
+      <td>{{document.nomeCidade}}</td>
+      <td>{{document.nomeCurso}}</td>
+      <td>{{document.nomeInstituicao}}</td>
+      <td>{{document.siglaInstituicao}}</td>
+      <td>{{document.tituloAcademico}}</td>
+      <td>{{document.preAmbulo}}</td>
+      <td>{{document.fichaCatalografica}}</td>
+      <td>{{document.dedicatoria}}</td>
+      <td>{{document.epigrafe}}</td>
+      <td>{{document.resumo}}</td>
+      <td>{{document.abstractX}}</td>
+      <td>{{document.agradecimentos}}</td>
+      <!--
+        particoes:Partition[],
+	      citacoes:Citation[],
+	      palavras:Word[]
+      -->
+    </tr>
+
+  </tbody>
+</table>

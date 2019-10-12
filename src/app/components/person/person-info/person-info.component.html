@@ -5,6 +5,8 @@
     <td>Nome</td>
     <td>Caráter</td>
     <td>E-mail</td>
+    <td>...</td>
+    <td>...</td>
   </thead>
   <tbody>
     <tr>
@@ -12,7 +14,8 @@
       <td>{{person.nome}}</td>
       <td>{{person.tipoPessoa}}</td>
       <td>{{person.email}}</td>
+      <td><a routerLink="/person/update/{{person.id}}">Editar</a></td>
+      <td><a routerLink="/person/delete/{{person.id}}">Exluir</a></td>
     </tr>
-
   </tbody>
 </table>

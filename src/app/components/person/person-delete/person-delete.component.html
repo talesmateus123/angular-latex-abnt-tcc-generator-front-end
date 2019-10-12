@@ -1,1 +1,12 @@
-<p>person-delete works!</p>
+<h3>Excluir pessoa</h3>
+
+<div *ngIf="person">
+  <label><b>Nome: {{person.nome}}</b></label>
+  <br>
+  <label><b>Caráter: {{person.tipoPessoa}}</b></label>
+  <br>
+  <label><b>E-mail: {{person.email}}</b></label>
+  <br>
+  <button (click)="delete()">Excluir</button>
+  <button (click)="cancel()">Cancelar</button>
+</div>

@@ -18,6 +18,8 @@
     <td>Resumo</td>
     <td>Abstract</td>
     <td>Agradecimentos</td>
+    <td>...</td>
+    <td>...</td>
   </thead>
   <tbody>
     <tr>
@@ -43,6 +45,8 @@
 	      citacoes:Citation[],
 	      palavras:Word[]
       -->
+      <td><a routerLink="/document/update/{{document.id}}">Editar</a></td>
+      <td><a routerLink="/document/delete/{{document.id}}">Exluir</a></td>
     </tr>
 
   </tbody>

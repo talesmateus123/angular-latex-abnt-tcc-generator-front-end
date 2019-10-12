@@ -1,1 +1,14 @@
-<p>document-delete works!</p>
+<h3>Excluir documento</h3>
+
+<div *ngIf="document">
+  <label><b>Título: {{document.titulo}}</b></label>
+  <br>
+  <label><b>Sub-título: {{document.subTitulo}}</b></label>
+  <br>
+  <label><b>Ano: {{document.ano}}</b></label>
+  <br>
+  <label><b>Escolaridade: {{document.nivelEscolar}}</b></label>
+  <br>
+  <button (click)="delete()">Excluir</button>
+  <button (click)="cancel()">Cancelar</button>
+</div>

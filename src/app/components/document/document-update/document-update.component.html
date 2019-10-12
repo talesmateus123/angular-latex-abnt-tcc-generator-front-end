@@ -1,1 +1,75 @@
-<p>document-update works!</p>
+<h3>Editar documento</h3>
+
+<div *ngIf="document">
+  <label>Título*
+    <input placeholder="Insira seu titulo" [(ngModel)]="document.titulo">
+  </label>
+  <br>
+  <label>Sub-título*
+    <input placeholder="Insira seu sub-título" [(ngModel)]="document.subTitulo">
+  </label>
+  <br>
+  <label>Título em inglês*
+    <input placeholder="Insert your title" [(ngModel)]="document.title">
+  </label>
+  <br>
+  <label>Ano*
+    <input type="number" placeholder="Insira o ano do trabalho" [(ngModel)]="document.ano">
+  </label>
+  <br>
+  <label>Escolaridade*
+    <input placeholder="Insira sua escolaridade" [(ngModel)]="document.nivelEscolar">
+  </label>
+  <br>
+  <label>Tipo de trabalho*
+    <input placeholder="Insira o tipo do trabalho" [(ngModel)]="document.tipo">
+  </label>
+  <br>
+  <!--pessoas:document[]-->
+  <label>Cidade*
+    <input placeholder="Insira sua cidade" [(ngModel)]="document.nomeCidade">
+  </label>
+  <br>
+  <label>Curso*
+    <input placeholder="Insira seu curso" [(ngModel)]="document.nomeCurso">
+  </label>
+  <br>
+  <label>Instituição*
+    <input placeholder="Insira sua instituicao" [(ngModel)]="document.nomeInstituicao">
+  </label>
+  <br>
+  <label>Sigla da instituição*
+    <input placeholder="Insira a sigla da instituicao" [(ngModel)]="document.siglaInstituicao">
+  </label>
+  <br>
+  <label>Título acadêmico*
+    <input placeholder="Insira seu tituloAcademico" [(ngModel)]="document.tituloAcademico">
+  </label>
+  <br>
+  <label>Pré-ambulo
+    <input placeholder="Insira o pré-ambulo" [(ngModel)]="document.preAmbulo">
+  </label>
+  <br>
+  <label>Dedicatoria
+    <input placeholder="Insira sua dedicatoria" [(ngModel)]="document.dedicatoria">
+  </label>
+  <br>
+  <label>Epígrafe
+    <input placeholder="Insira seu epígrafe" [(ngModel)]="document.epigrafe">
+  </label>
+  <br>
+  <label>Resumo*
+    <input placeholder="Insira seu resumo" [(ngModel)]="document.resumo">
+  </label>
+  <br>
+  <label>Abstract*
+    <input placeholder="Insira seu abstract" [(ngModel)]="document.abstractX">
+  </label>
+  <br>
+  <label>Agradecimentos
+    <input placeholder="Insira seu agradecimentos" [(ngModel)]="document.agradecimentos">
+  </label>
+  <br>
+  <button (click)="create()">Salvar</button>
+  <button (click)="cancel()">Calcelar</button>
+</div>

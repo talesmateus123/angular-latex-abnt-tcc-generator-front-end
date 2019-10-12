@@ -20,6 +20,7 @@
     <td>Agradecimentos</td>
     <td>...</td>
     <td>...</td>
+    <td>...</td>
   </thead>
   <tbody>
     <tr *ngFor="let document of documents">
@@ -45,6 +46,7 @@
 	      citacoes:Citation[],
 	      palavras:Word[]
       -->
+      <td><a routerLink="/document/{{document.id}}">Info</a></td>
       <td><a routerLink="/document/update/{{document.id}}">Editar</a></td>
       <td><a routerLink="/document/delete/{{document.id}}">Exluir</a></td>
     </tr>

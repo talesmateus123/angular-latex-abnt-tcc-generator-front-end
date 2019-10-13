@@ -24,7 +24,7 @@ export class DocumentUpdateComponent implements OnInit {
   update(){
     this.documentService.updateDocument(this.id, this.document).subscribe(
       res => {
-
+        alert('Atualizado com sucesso!')
       }
     )
   }

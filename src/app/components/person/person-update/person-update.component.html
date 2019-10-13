@@ -1,22 +1,41 @@
 <h3>Editar pessoa</h3>
+<br>
+<div *ngIf="person" class="form-group">
+  <div class="row">
+    <div class="col-sm-7">
+      <label>Nome</label>
+      <input  class="form-control" type="text" placeholder="Fulano da Silva" size="40" maxlength="50" [(ngModel)]="person.nome">
+    </div>
+    <div class="col-sm-5">
+      <label>Caráter</label>
+      <select class="form-control" [(ngModel)]="person.tipoPessoa">
+          <option value="orientando" >Aluno</option>
+          <option value="orientador" >Orientador</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <label>Login</label>
+      <input class="form-control" type="login" placeholder="fulano123" size="40" maxlength="100" [(ngModel)]="person.login">
+    </div>
+    <div class="col-sm-3">
+      <label>Senha</label>
+      <input class="form-control" type="password" [(ngModel)]="person.senha">
+    </div>
+    <div class="col-sm-4">
+      <label>Repita sua senha</label>
+      <input class="form-control" type="password" [(ngModel)]="person.senha">
+    </div>
+  </div>
+  <br>
 
-<div *ngIf="person">
-  <label>Nome
-    <input placeholder="Insira seu nome" [(ngModel)]="person.nome">
-  </label>
-  <br>
-  <label>Caráter
-    <input placeholder="Insira seu caráter" [(ngModel)]="person.tipoPessoa">
-  </label>
-  <br>
-  <label>E-mail
-    <input placeholder="Insira seu e-mail" [(ngModel)]="person.email">
-  </label>
-  <br>
-  <label>Senha
-    <input placeholder="Insira sua senha" [(ngModel)]="person.senha">
-  </label>
-  <br>
-  <button (click)="update()">Salvar</button>
-  <button (click)="cancel()">Calcelar</button>
+  <div class="row">
+    <div class="col-sm-6 col-button-left">
+      <button type="button" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>
+    <div class="col-sm-6 col-button-right">
+      <button type="button" class="btn btn-success" (click)="update()">Salvar</button>
+    </div>
+  </div>
 </div>

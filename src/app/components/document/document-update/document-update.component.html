@@ -1,75 +1,118 @@
 <h3>Editar documento</h3>
+<br>
+<div *ngIf="document" class="form-group">
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Título*</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.titulo"></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Sub-título*</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.subTitulo"></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Título em inglês*</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.title"></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-2">
+      <label>Ano*</label>
+      <input type="number" class="form-control" [(ngModel)]="document.ano">
+    </div>
+    <div class="form-group col-sm-5">
+    <label>Escolaridade*</label>
+      <select class="form-control" [(ngModel)]="document.nivelEscolar">
+        <option value="orientando" >Aluno</option>
+        <option value="orientador" >Orientador</option>
+      </select>
+    </div>
+    <div class="form-group col-sm-5">
+      <label>Tipo de trabalho*</label>
+      <select class="form-control" [(ngModel)]="document.tipo">
+        <option value="monografia" >Monografia</option>
+        <option value="artigo" >Artigo</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-4">
+      <label>Cidade/Estado*</label>
+      <input type="text" class="form-control" [(ngModel)]="document.nomeCidade">
+    </div>
+    <div class="form-group col-sm-8">
+      <label>Curso*</label>
+      <input type="text" class="form-control" [(ngModel)]="document.nomeCurso">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Instituição*</label>
+      <input type="text" class="form-control" [(ngModel)]="document.nomeInstituicao">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-6">
+      <label>Sigla da nstituição*</label>
+      <input type="text" class="form-control" [(ngModel)]="document.siglaInstituicao">
+    </div>
+    <div class="form-group col-sm-6">
+      <label>Título acadêmico*</label>
+      <select class="form-control" [(ngModel)]="document.tituloAcademico">
+        <option value="graduacao" >Graduação</option>
+      </select>
+    </div>
+  </div>
 
-<div *ngIf="document">
-  <label>Título*
-    <input placeholder="Insira seu titulo" [(ngModel)]="document.titulo">
-  </label>
-  <br>
-  <label>Sub-título*
-    <input placeholder="Insira seu sub-título" [(ngModel)]="document.subTitulo">
-  </label>
-  <br>
-  <label>Título em inglês*
-    <input placeholder="Insert your title" [(ngModel)]="document.title">
-  </label>
-  <br>
-  <label>Ano*
-    <input type="number" placeholder="Insira o ano do trabalho" [(ngModel)]="document.ano">
-  </label>
-  <br>
-  <label>Escolaridade*
-    <input placeholder="Insira sua escolaridade" [(ngModel)]="document.nivelEscolar">
-  </label>
-  <br>
-  <label>Tipo de trabalho*
-    <input placeholder="Insira o tipo do trabalho" [(ngModel)]="document.tipo">
-  </label>
-  <br>
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Pré-ambulo</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.preAmbulo"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Dedicatoria</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.dedicatoria"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label>Epígrafe</label>
+      <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.epigrafe"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+      <div class="form-group col-sm-12">
+        <label>Resumo*</label>
+        <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.resumo"></textarea>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-sm-12">
+        <label>Abstract*</label>
+        <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.abstractX"></textarea>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-sm-12">
+        <label>Agradecimentos</label>
+        <textarea style="width: 100%;" class="form-control" rows="2" [(ngModel)]="document.agradecimentos"></textarea>
+      </div>
+    </div>
   <!--pessoas:document[]-->
-  <label>Cidade*
-    <input placeholder="Insira sua cidade" [(ngModel)]="document.nomeCidade">
-  </label>
-  <br>
-  <label>Curso*
-    <input placeholder="Insira seu curso" [(ngModel)]="document.nomeCurso">
-  </label>
-  <br>
-  <label>Instituição*
-    <input placeholder="Insira sua instituicao" [(ngModel)]="document.nomeInstituicao">
-  </label>
-  <br>
-  <label>Sigla da instituição*
-    <input placeholder="Insira a sigla da instituicao" [(ngModel)]="document.siglaInstituicao">
-  </label>
-  <br>
-  <label>Título acadêmico*
-    <input placeholder="Insira seu tituloAcademico" [(ngModel)]="document.tituloAcademico">
-  </label>
-  <br>
-  <label>Pré-ambulo
-    <input placeholder="Insira o pré-ambulo" [(ngModel)]="document.preAmbulo">
-  </label>
-  <br>
-  <label>Dedicatoria
-    <input placeholder="Insira sua dedicatoria" [(ngModel)]="document.dedicatoria">
-  </label>
-  <br>
-  <label>Epígrafe
-    <input placeholder="Insira seu epígrafe" [(ngModel)]="document.epigrafe">
-  </label>
-  <br>
-  <label>Resumo*
-    <input placeholder="Insira seu resumo" [(ngModel)]="document.resumo">
-  </label>
-  <br>
-  <label>Abstract*
-    <input placeholder="Insira seu abstract" [(ngModel)]="document.abstractX">
-  </label>
-  <br>
-  <label>Agradecimentos
-    <input placeholder="Insira seu agradecimentos" [(ngModel)]="document.agradecimentos">
-  </label>
-  <br>
-  <button (click)="create()">Salvar</button>
-  <button (click)="cancel()">Calcelar</button>
+  <div class="row">
+    <div class="col-sm-12 col-button-right">
+      <button type="button" class="btn btn-success" (click)="update()">Salvar</button>
+    </div>
+  </div>
 </div>

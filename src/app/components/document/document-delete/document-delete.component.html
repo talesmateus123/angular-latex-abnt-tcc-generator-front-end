@@ -1,14 +1,41 @@
 <h3>Excluir documento</h3>
-
-<div *ngIf="document">
-  <label><b>Título: {{document.titulo}}</b></label>
-  <br>
-  <label><b>Sub-título: {{document.subTitulo}}</b></label>
-  <br>
-  <label><b>Ano: {{document.ano}}</b></label>
-  <br>
-  <label><b>Escolaridade: {{document.nivelEscolar}}</b></label>
-  <br>
-  <button (click)="delete()">Excluir</button>
-  <button (click)="cancel()">Cancelar</button>
+<br>
+<div *ngIf="document" class="form-group">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class='table table-sm'>
+        <tbody>
+          <tr>
+            <th scope="row">Id:</th>
+            <td>{{document.id}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Título:</th>
+            <td>{{document.titulo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tipo:</th>
+            <td *ngIf="document.tipo==='monografia'">Monografia</td>
+            <td *ngIf="document.tipo==='artigo'">Artigo</td>
+          </tr>
+          <tr>
+            <th scope="row">Curso:</th>
+            <td>{{document.nomeCurso}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Cidade:</th>
+            <td >{{document.nomeCidade}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-button-left">
+      <button class="btn btn-danger" (click)="delete()">Excluir</button>
+    </div>
+    <div class="col-sm-6 col-button-right">
+      <button class="btn btn-info" (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
 </div>

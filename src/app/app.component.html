@@ -1,12 +1,10 @@
-<h1>Minha aplicação</h1>
-<hr>
-<nav>
-  <ul>
-    <li><a routerLink='/people'>Pessoas</a></li>
-    <li><a routerLink='/person/create'>Nova pessoa</a></li>
-    <li><a routerLink='/documents'>Documentos</a></li>
-    <li><a routerLink='/document/create'>Novo documento</a></li>
-  </ul>
-</nav>
-<hr>
-<router-outlet></router-outlet>
+<div class="bg-light border">
+  <div class="row">
+      <div class="col-sm-12"><app-navbar-top></app-navbar-top></div>
+  </div>
+  <hr>
+  <div class="row content">
+      <div class="col-sm-3"><app-navbar-left></app-navbar-left></div>
+      <div class="col-sm-9"><router-outlet></router-outlet></div>
+  </div>
+</div>

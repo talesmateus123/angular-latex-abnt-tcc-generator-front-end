@@ -24,7 +24,7 @@ export class PersonUpdateComponent implements OnInit {
   update(){
     this.personService.updatePerson(this.id, this.person).subscribe(
       res => {
-
+        alert('Atualizado com sucesso!')
       }
     )
   }

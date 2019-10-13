@@ -13,8 +13,9 @@ export class PersonCreateComponent implements OnInit {
     id:null,
     nome:'',
     tipoPessoa:'',
-    email:'',
-    senha:''
+    login:'',
+    senha:'',
+    documents:null
   }
 
   private id:string
@@ -27,7 +28,7 @@ export class PersonCreateComponent implements OnInit {
   create(){
     this.personService.createPerson(this.person).subscribe(
       res => {
-
+        alert('Criado com sucesso!')
       }
     )
   }

@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import {  } from 'ngx-bootstrap';
+//components
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
 import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
 import { DocumentInfoComponent } from './components/document/document-info/document-info.component';
@@ -16,6 +19,9 @@ import { PersonDeleteComponent } from './components/person/person-delete/person-
 import { PersonInfoComponent } from './components/person/person-info/person-info.component';
 import { PersonListComponent } from './components/person/person-list/person-list.component';
 import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
+import { NavbarTopComponent } from './components/navbar-top/navbar-top.component';
+import { NavbarLeftComponent } from './components/navbar-left/navbar-left.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,12 +35,15 @@ import { PersonUpdateComponent } from './components/person/person-update/person-
     PersonInfoComponent,
     PersonListComponent,
     PersonUpdateComponent,
+    NavbarTopComponent,
+    NavbarLeftComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

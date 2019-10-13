@@ -15,25 +15,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DocumentCreateComponent implements OnInit {
   private document:Document = {
     id:null,
-    titulo:'Título',
-    subTitulo:'SubTítulo',
-    title:'Title',
+    titulo:'Título do documento',
+    subTitulo:'Sub-título do documento',
+    title:'Document title',
     ano:2019,
     nivelEscolar:'superior',
     tipo:'monografia',
     pessoas:null,
-    nomeCidade:'Corumbá',
-    nomeCurso:'Curso',
-    nomeInstituicao:'Instituição',
-    siglaInstituicao:'I',
-    tituloAcademico:'superior',
-    preAmbulo:'pré-ambulo',
-    fichaCatalografica:'ficha catalografica',
-    dedicatoria:'dedicatória',
-    epigrafe:'epígrafe',
-    resumo:'resumo',
-    abstractX:'abstract',
-    agradecimentos:'agradecimentos',
+    nomeCidade:'Corumbá-MS',
+    nomeCurso:'Análise e Desenvolvimento de Sistemas',
+    nomeInstituicao:'Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul',
+    siglaInstituicao:'IFMS',
+    tituloAcademico:'tecnologo',
+    preAmbulo:'Texto do pré-ambulo',
+    fichaCatalografica:'Texto da ficha catalografica',
+    dedicatoria:'Texto da dedicatória',
+    epigrafe:'Texto do epígrafe',
+    resumo:'Texto do resumo',
+    abstractX:'Abstract text',
+    agradecimentos:'Texto dos agradecimentos',
     particoes:null,
     citacoes:null,
     palavras:null
@@ -47,7 +47,7 @@ export class DocumentCreateComponent implements OnInit {
   create(){
     this.documentService.createDocument(this.document).subscribe(
       res => {
-
+        alert('Criado com sucesso!')
       }
     )
   }

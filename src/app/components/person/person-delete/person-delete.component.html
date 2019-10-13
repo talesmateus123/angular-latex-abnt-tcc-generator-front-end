@@ -1,12 +1,47 @@
 <h3>Excluir pessoa</h3>
-
-<div *ngIf="person">
-  <label><b>Nome: {{person.nome}}</b></label>
-  <br>
-  <label><b>Caráter: {{person.tipoPessoa}}</b></label>
-  <br>
-  <label><b>E-mail: {{person.email}}</b></label>
-  <br>
-  <button (click)="delete()">Excluir</button>
-  <button (click)="cancel()">Cancelar</button>
+<br>
+<div *ngIf="person" class="form-group">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class='table table-sm'>
+        <tbody>
+          <tr>
+            <th scope="row">Id:</th>
+            <td>{{person.id}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Nome:</th>
+            <td>{{person.nome}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Caráter:</th>
+            <td *ngIf="person.tipoPessoa==='orientando'">Aluno</td>
+            <td *ngIf="person.tipoPessoa==='orientador'">Orientador</td>
+          </tr>
+          <tr>
+              <th scope="row">Login:</th>
+              <td>{{person.login}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Senha:</th>
+                <td class="webkit-input-placeholder">{{person.senha}}</td>
+              </tr>
+          <div *ngFor="let document of person.documents">
+            <tr>
+              <th scope="row">Documento:</th>
+              <td>{{document.title}}</td>
+            </tr>
+          </div>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-button-left">
+      <button class="btn btn-danger" (click)="delete()">Excluir</button>
+    </div>
+    <div class="col-sm-6 col-button-right">
+      <button class="btn btn-info" (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
 </div>

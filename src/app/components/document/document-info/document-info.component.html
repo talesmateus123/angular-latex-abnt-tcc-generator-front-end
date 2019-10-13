@@ -1,53 +1,42 @@
 <h3>Documento</h3>
+<br>
+<div *ngIf="document" class="form-group">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class='table table-sm'>
+        <tbody>
+          <tr>
+            <th scope="row">Id:</th>
+            <td>{{document.id}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Título:</th>
+            <td>{{document.titulo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tipo:</th>
+            <td *ngIf="document.tipo==='monografia'">Monografia</td>
+            <td *ngIf="document.tipo==='artigo'">Artigo</td>
+          </tr>
+          <tr>
+            <th scope="row">Curso:</th>
+            <td>{{document.nomeCurso}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Cidade:</th>
+            <td >{{document.nomeCidade}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<table *ngIf="document">
-  <thead>
-    <td>ID</td>
-    <td>Título</td>
-    <td>Sub-título</td>
-    <td>Nível escolar</td>
-    <td>Cidade</td>
-    <td>Curso</td>
-    <td>Instituição</td>
-    <td>Sigla da Instituição</td>
-    <td>Título acadêmico</td>
-    <td>Pré-ambulo</td>
-    <td>Ficha catalográfica</td>
-    <td>Dedicatória</td>
-    <td>Epígrafe</td>
-    <td>Resumo</td>
-    <td>Abstract</td>
-    <td>Agradecimentos</td>
-    <td>...</td>
-    <td>...</td>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{document.id}}</td>
-      <td>{{document.titulo}}</td>
-      <td>{{document.subTitulo}}</td>
-      <td>{{document.nivelEscolar}}</td>
-      <!--pessoas:Person[]-->
-      <td>{{document.nomeCidade}}</td>
-      <td>{{document.nomeCurso}}</td>
-      <td>{{document.nomeInstituicao}}</td>
-      <td>{{document.siglaInstituicao}}</td>
-      <td>{{document.tituloAcademico}}</td>
-      <td>{{document.preAmbulo}}</td>
-      <td>{{document.fichaCatalografica}}</td>
-      <td>{{document.dedicatoria}}</td>
-      <td>{{document.epigrafe}}</td>
-      <td>{{document.resumo}}</td>
-      <td>{{document.abstractX}}</td>
-      <td>{{document.agradecimentos}}</td>
-      <!--
-        particoes:Partition[],
-	      citacoes:Citation[],
-	      palavras:Word[]
-      -->
-      <td><a routerLink="/document/update/{{document.id}}">Editar</a></td>
-      <td><a routerLink="/document/delete/{{document.id}}">Exluir</a></td>
-    </tr>
-
-  </tbody>
-</table>
+  <div class="row">
+    <div class="col-sm-6 col-button-left">
+      <button type="button" class="btn btn-danger" routerLink="/document/delete/{{document.id}}">Excluir</button>
+    </div>
+    <div class="col-sm-6 col-button-right">
+      <button type="button" class="btn btn-success" routerLink="/document/update/{{document.id}}">Alterar informações</button>
+    </div>
+  </div>
+</div>

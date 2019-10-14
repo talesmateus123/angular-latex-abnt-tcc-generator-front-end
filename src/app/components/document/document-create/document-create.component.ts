@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Document } from 'src/app/models/document';
-import { Person } from 'src/app/models/person';
 import { Partition } from 'src/app/models/partition';
-import { Citation } from 'src/app/models/citation';
-import { Word } from 'src/app/models/word';
 import { DocumentService } from 'src/app/services/document.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -38,6 +35,7 @@ export class DocumentCreateComponent implements OnInit {
     citacoes:null,
     palavras:null
   }
+
 
   constructor(private documentService:DocumentService, private route: ActivatedRoute, private router: Router) { }
 

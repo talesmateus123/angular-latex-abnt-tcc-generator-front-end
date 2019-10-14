@@ -1,19 +1,16 @@
 <h3>Documentos</h3>
-<hr>
-<table *ngIf="documents" class='table table-hover'>
-  <thead class="thead-light">
+<br>
+<p-table [value]="documents">
+  <ng-template pTemplate="header">
     <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Título</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Curso</th>
-      <th scope="col">Cidade</th>
-      <th scope="col">Instituição</th>
+      <th>Título</th>
+      <th>Tipo</th>
+      <th>Instituição</th>
+      <th>...</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let document of documents" routerLink="/document/{{document.id}}">
-      <th>{{document.id}}</th>
+  </ng-template>
+  <ng-template pTemplate="body" let-document>
+    <tr routerLink="/document/update/{{document.id}}">
       <td>{{document.titulo}}</td>
       <ng-container *ngIf="document.tipo==='monografia'">
         <td>Monografia</td>
@@ -21,9 +18,12 @@
       <ng-container *ngIf="document.tipo==='artigo'">
         <td>Artigo</td>
       </ng-container>
-      <td>{{document.nomeCurso}}</td>
-      <td>{{document.nomeCidade}}</td>
       <td>{{document.siglaInstituicao}}</td>
+      <td>
+        <p-button styleClass="ui-button-danger" routerLink="/document/delete/{{document.id}}" label="Excluir" ></p-button>
+      </td>
     </tr>
-  </tbody>
-</table>
+  </ng-template>
+</p-table>
+
+

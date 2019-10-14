@@ -1,23 +1,21 @@
 <h3>Pessoas</h3>
 <br>
-<table *ngIf="people" class='table table-hover'>
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Caráter</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let person of people" routerLink="/person/{{person.id}}">
-      <th scope="row">{{person.id}}</th>
-      <td>{{person.nome}}</td>
-      <ng-container *ngIf="person.tipoPessoa==='orientando'">
-        <td>Aluno</td>
-      </ng-container>
-      <ng-container *ngIf="person.tipoPessoa==='orientador'">
-        <td>Orientador</td>
-      </ng-container>
-    </tr>
-  </tbody>
-</table>
+<p-table [value]="people">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nome</th>
+        <th>Caráter</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-person>
+      <tr routerLink="/person/{{person.id}}">
+        <td>{{person.nome}}</td>
+        <ng-container *ngIf="person.tipoPessoa==='orientando'">
+          <td>Aluno</td>
+        </ng-container>
+        <ng-container *ngIf="person.tipoPessoa==='orientador'">
+          <td>Orientador</td>
+        </ng-container>
+      </tr>
+    </ng-template>
+  </p-table>

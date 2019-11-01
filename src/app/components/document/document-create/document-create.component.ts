@@ -11,29 +11,34 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DocumentCreateComponent implements OnInit {
   private document:Document = {
-    id:null,
-    titulo:'Título do documento',
-    subTitulo:'Sub-título do documento',
-    title:'Document title',
-    ano:2019,
-    nivelEscolar:'superior',
-    tipo:'monografia',
-    pessoas:null,
-    nomeCidade:'Corumbá-MS',
-    nomeCurso:'Análise e Desenvolvimento de Sistemas',
-    nomeInstituicao:'Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul',
-    siglaInstituicao:'IFMS',
-    tituloAcademico:'tecnologo',
-    preAmbulo:'Texto do pré-ambulo',
-    fichaCatalografica:'Texto da ficha catalografica',
-    dedicatoria:'Texto da dedicatória',
-    epigrafe:'Texto do epígrafe',
-    resumo:'Texto do resumo',
-    abstractX:'Abstract text',
-    agradecimentos:'Texto dos agradecimentos',
-    particoes:null,
-    citacoes:null,
-    palavras:null
+    id: null,
+    title: "Trabalho 1",
+    subTitle: "descrição do trabalho",
+    titleInEnglish: "Work 1",
+    year: 2019,
+    schooling: "Ensino superior",
+    documentType: "monografia",
+    cityName: "Corumbá",
+    courseName: "Análise de Sistemas",
+    institutionName: "Instituto Federal do Mato Grosso do Sul",
+    institutionInitials: "IFMS",
+    academicTitle: "bacharel",
+    preamble: null,
+    catalogCard: null,
+    dedication: null,
+    epigraph: null,
+    abstractX: null,
+    abstractInEnglish: null,
+    thanks: null,
+    partitions: [],
+    people: [],
+    user: {
+      id: 1,
+      name: null,
+      login: null,
+      password: null,
+      documents: null
+    }
   }
 
 

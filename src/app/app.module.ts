@@ -10,28 +10,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ButtonModule } from 'primeng/button';
-import { EditorModule } from 'primeng/editor';
 import { TableModule } from 'primeng/table';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { EditorModule } from 'primeng/editor';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { InputTextModule } from 'primeng/inputtext';
+import { TabViewModule } from 'primeng/tabview';
 //components
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
 import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
-import { DocumentUpdateComponent } from './components/document/document-update/document-update.component';
 import { DocumentListComponent } from './components/document/document-list/document-list.component';
-import { PersonCreateComponent } from './components/person/person-create/person-create.component';
-import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
-import { PersonInfoComponent } from './components/person/person-info/person-info.component';
-import { PersonListComponent } from './components/person/person-list/person-list.component';
-import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
-import { NavbarTopComponent } from './components/navbar-top/navbar-top.component';
-import { NavbarLeftComponent } from './components/navbar-left/navbar-left.component';
-import { PartitionCreateComponent } from './components/partition/partition-create/partition-create.component';
-import { PartitionListComponent } from './components/partition/partition-list/partition-list.component';
-import { PartitionUpdateComponent } from './components/partition/partition-update/partition-update.component';
-import { PartitionDeleteComponent } from './components/partition/partition-delete/partition-delete.component';
-import { DataxCreateComponent } from './components/datax/datax-create/datax-create.component';
-import { DataxListComponent } from './components/datax/datax-list/datax-list.component';
-import { DataxUpdateComponent } from './components/datax/datax-update/datax-update.component';
-import { DataxDeleteComponent } from './components/datax/datax-delete/datax-delete.component';
+import { DocumentComponent } from './components/document/document.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PartitionComponent } from './components/partition/partition.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
+import { DocumentGenerateOutputComponent } from './components/document/document-generate-output/document-generate-output.component';
+import { DocumentFormComponent } from './components/forms/document-form/document-form.component';
+import { PersonFormComponent } from './components/forms/person-form/person-form.component';
 
 
 @NgModule({
@@ -39,23 +36,15 @@ import { DataxDeleteComponent } from './components/datax/datax-delete/datax-dele
     AppComponent,
     DocumentCreateComponent,
     DocumentDeleteComponent,
-    DocumentUpdateComponent,
     DocumentListComponent,
-    PersonCreateComponent,
-    PersonDeleteComponent,
-    PersonInfoComponent,
-    PersonListComponent,
-    PersonUpdateComponent,
-    NavbarTopComponent,
-    NavbarLeftComponent,
-    PartitionCreateComponent,
-    PartitionListComponent,
-    PartitionUpdateComponent,
-    PartitionDeleteComponent,
-    DataxCreateComponent,
-    DataxListComponent,
-    DataxUpdateComponent,
-    DataxDeleteComponent
+    FooterComponent,
+    HeaderComponent,
+    DocumentComponent,
+    PartitionComponent,
+    PrincipalComponent,
+    DocumentGenerateOutputComponent,
+    DocumentFormComponent,
+    PersonFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,8 +55,13 @@ import { DataxDeleteComponent } from './components/datax/datax-delete/datax-dele
     AccordionModule,
     TabMenuModule,
     ButtonModule,
+    TableModule,
+    PanelMenuModule,
     EditorModule,
-    TableModule
+    InputTextareaModule,
+    SelectButtonModule,
+    InputTextModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

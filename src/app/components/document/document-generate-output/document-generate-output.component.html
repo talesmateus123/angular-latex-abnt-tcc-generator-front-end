@@ -1,0 +1,12 @@
+<div *ngIf="document" class="ui-g ui-fluid">
+
+    <div class="ui-g-12 ui-md-12 text-right">
+        <div class="ui-inputgroup">
+            <p-button inputStyle="text-align: left" label="Baixar projeto LaTeX" (click)="generateLatex()" icon="pi pi-download" styleClass="ui-button-success" ></p-button>
+        </div>
+        <hr>
+        <div class="ui-inputgroup">
+            <p-button inputStyle="text-align: right" label="Baixar arquivo PDF" (click)="generatePdf()" icon="pi pi-download" styleClass="ui-button-success" ></p-button>
+        </div>
+    </div>
+</div>

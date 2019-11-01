@@ -3,26 +3,25 @@ import { Routes, RouterModule } from '@angular/router';
 import { DocumentListComponent } from './components/document/document-list/document-list.component';
 import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
-import { DocumentUpdateComponent } from './components/document/document-update/document-update.component';
 
-import { PersonCreateComponent } from './components/person/person-create/person-create.component';
-import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
-import { PersonInfoComponent } from './components/person/person-info/person-info.component';
-import { PersonListComponent } from './components/person/person-list/person-list.component';
-import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
+import { DocumentComponent } from './components/document/document.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/documents', pathMatch: 'full' },
   { path:'document/create', component:DocumentCreateComponent },
   { path:'document/delete/:id', component:DocumentDeleteComponent },
   { path:'documents', component:DocumentListComponent },
-  { path:'document/update/:id', component:DocumentUpdateComponent },
+  { path:'document/:id', component:DocumentComponent },
 
-  { path:'person/create', component:PersonCreateComponent },
-  { path:'person/delete/:id', component:PersonDeleteComponent },
-  { path:'person/:id', component:PersonInfoComponent },
-  { path:'people', component:PersonListComponent },
-  { path:'person/update/:id', component:PersonUpdateComponent }
+//  { path:'person/create', component:PersonCreateComponent },
+//  { path:'person/delete/:id', component:PersonDeleteComponent },
+//  { path:'person/:id', component:PersonInfoComponent },
+//  { path:'people', component:PersonListComponent },
+  //{ path:'person/update/:id', component:PersonUpdateComponent },
+
+  
 ];
 
 @NgModule({

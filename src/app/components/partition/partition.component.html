@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-3">
+    <p-panelMenu [model]="items" [style]="{'width':'auto'}"></p-panelMenu>
+  </div>
+  <div class="col-sm-9">
+    <p *ngFor="let item of document.partitions.title" >{{item}}</p>
+
+    <p-editor [(ngModel)]="document.partitions" [style]="{'height':'400px'}">
+      <p-header>
+        <span class="ql-format-group">
+          <select class="ql-header">
+            <option value="2">Seção</option>
+            <option value="3">Subseção</option>
+            <option value="4">Sub-subseção</option>
+            <option selected>Texto</option>
+          </select>
+        </span>
+        <span class="ql-format-group">
+          <button class="ql-italic" aria-label="Língua estrangeira"></button>
+        </span>
+        <span class="ql-format-group">
+          <button class="ql-list" value="ordered"></button>
+          <button class="ql-list" value="bullet"></button>
+        </span>
+        <span class="ql-format-group">
+          <button aria-label="Url" class="ql-link"></button>
+          <button aria-label="Imagem" class="ql-image"></button>
+        </span>
+        <span class="ql-format-group">
+          <p-button (click)="document.partitions=null" icon="pi pi-times"></p-button>
+        </span>
+      </p-header>
+    </p-editor>
+  </div>
+</div>

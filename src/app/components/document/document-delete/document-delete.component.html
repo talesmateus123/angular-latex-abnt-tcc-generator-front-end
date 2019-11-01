@@ -11,20 +11,20 @@
           </tr>
           <tr>
             <th scope="row">Título:</th>
-            <td>{{document.titulo}}</td>
+            <td>{{document.title}}</td>
           </tr>
           <tr>
             <th scope="row">Tipo:</th>
-            <td *ngIf="document.tipo==='monografia'">Monografia</td>
-            <td *ngIf="document.tipo==='artigo'">Artigo</td>
+            <td *ngIf="document.documentType==='monografia'">Monografia</td>
+            <td *ngIf="document.documentType==='artigo'">Artigo</td>
           </tr>
           <tr>
             <th scope="row">Curso:</th>
-            <td>{{document.nomeCurso}}</td>
+            <td>{{document.courseName}}</td>
           </tr>
           <tr>
             <th scope="row">Cidade:</th>
-            <td >{{document.nomeCidade}}</td>
+            <td >{{document.cityName}}</td>
           </tr>
         </tbody>
       </table>
@@ -32,10 +32,10 @@
   </div>
   <div class="row">
     <div class="col-sm-6 col-button-left">
-      <button class="btn btn-info" (click)="cancel()">Cancelar</button>
+        <p-button label="Cancelar" (click)="cancel()" icon="pi pi-file" styleClass="ui-button-info"  [ngStyle]="{ 'float': 'left'}"></p-button>
     </div>
     <div class="col-sm-6 col-button-right">
-      <button class="btn btn-danger" (click)="delete()">Excluir</button>
+        <p-button styleClass="ui-button-danger" [ngStyle]="{ 'float': 'right'}" (click)="delete()" label="Excluir" ></p-button>
     </div>
   </div>
 </div>

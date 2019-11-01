@@ -1,30 +1,27 @@
 import { Person } from 'src/app/models/person'
 import { Partition } from 'src/app/models/partition'
-import { Citation } from 'src/app/models/citation'
-import { Word } from 'src/app/models/word'
-
+import { User } from './user'
 export interface Document {
-  id:number,
-	titulo:String,
-	subTitulo:String,
-  title:String,
-  ano:number,
-	nivelEscolar:String,
-	tipo:String,
-	pessoas:Person[],
-	nomeCidade:String,
-	nomeCurso:String,
-	nomeInstituicao:String,
-	siglaInstituicao:String,
-	tituloAcademico:String,
-	preAmbulo:String,
-	fichaCatalografica:String,
-	dedicatoria:String,
-	epigrafe:String,
-	resumo:String,
-	abstractX:String,
-	agradecimentos:String,
-	particoes:Partition[],
-	citacoes:Citation[],
-	palavras:Word[]
+  id: number,
+  title: string,
+  subTitle: string,
+  titleInEnglish: string,
+  year: number,
+  schooling: string,
+  documentType: string,
+  cityName: string,
+  courseName: string,
+  institutionName: string,
+  institutionInitials: string,
+  academicTitle: string,
+  preamble: string,
+  catalogCard: string,
+  dedication: string,
+  epigraph: string,
+  abstractX: string,
+  abstractInEnglish: string,
+  thanks: string,
+  partitions: Partition[],
+  people: Person[],
+  user:User
 }

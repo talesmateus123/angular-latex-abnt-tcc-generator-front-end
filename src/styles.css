@@ -1,3 +1,6 @@
 p-table{
   text-align: center;
 }
+.ui-fluid .ui-buttonset.ui-buttonset-5 .ui-button {
+  width: initial !important;
+}

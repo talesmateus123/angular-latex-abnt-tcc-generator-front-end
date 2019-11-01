@@ -1,0 +1,123 @@
+<div class="ui-g ui-fluid">
+
+    <div class="ui-g-12 ui-md-6">
+      <div class="ui-inputgroup">
+        <label>Título*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <textarea pInputTextarea style="height:100px;" [(ngModel)]="document.title"></textarea>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-6">
+      <div class="ui-inputgroup">
+        <label>Sub-título*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <textarea pInputTextarea style="height:100px;" [(ngModel)]="document.subTitle"></textarea>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-6">
+      <div class="ui-inputgroup">
+        <label>Título em inglês*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <textarea pInputTextarea style="height:100px;" [(ngModel)]="document.titleInEnglish"></textarea>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-3">
+      <div class="ui-inputgroup">
+        <label>Ano*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="number" [(ngModel)]="document.year" pInputText/>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-3">
+      <div class="ui-inputgroup">
+        <label>Cidade/Estado*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="text" [(ngModel)]="document.cityName" pInputText/>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-6">
+      <div class="ui-inputgroup">
+        <label>Escolaridade*</label>
+      </div>
+      <div class="ui-inputgroup ui-fluid">
+        <p-selectButton [options]="escolaridades" [(ngModel)]="document.schooling" single="Single"></p-selectButton>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-6">
+      <div class="ui-inputgroup">
+        <label>Título acadêmico*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <p-selectButton [options]="tituloAcademico" [(ngModel)]="document.academicTitle" single="Single"></p-selectButton>
+      </div>
+    </div>
+  
+  
+    <div class="ui-g-12 ui-md-9">
+      <div class="ui-inputgroup">
+        <label>Instituição*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="text" [(ngModel)]="document.institutionName" pInputText/>
+      </div>
+    </div>
+  
+  
+    <div class="ui-g-12 ui-md-3">
+      <div class="ui-inputgroup">
+        <label>Sigla da instituição*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="text" [(ngModel)]="document.institutionInitials" pInputText/>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup">
+        <label>Curso*</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="text" [(ngModel)]="document.courseName" pInputText/>
+      </div>
+    </div>
+  
+  
+    <div *ngIf="updateForm" class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup">
+        <label>Dedicatória</label>
+      </div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <textarea pInputTextarea style="height:100px;" [(ngModel)]="document.dedication"></textarea>
+      </div>
+    </div>
+  
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup" [ngStyle]="{ 'text-align': 'right' , 'float': 'right'}">
+        <p-button *ngIf="createForm" label="Salvar" (click)="create()" icon="pi pi-save" styleClass="ui-button-success" ></p-button>
+        <p-button *ngIf="updateForm" label="Salvar" (click)="update()" icon="pi pi-save" styleClass="ui-button-success" ></p-button>
+      </div>
+    </div>
+    
+    
+  </div>
+  

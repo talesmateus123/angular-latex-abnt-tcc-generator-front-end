@@ -3,7 +3,7 @@
 ## Project information 
 ### Goal 
 
-Develop tool for automatic generation of latex template according to ABNT standards (Brazilian standardization) and customized for the IFMS Corumbá campus (Mato Grosso do Sul, Brazil), based on the premise of filling out forms and updating fields such as "student name" , 'name of the course', 'title', and the other chapters of the work.
+Develop tool for automated generation of LaTeX template according to ABNT standards (Brazilian standardization) and customized for the IFMS Corumbá campus (Mato Grosso do Sul, Brazil), based on the premise of filling out forms and updating fields such as "student name" , 'name of the course', 'title', and the other chapters of the work.
 The project back-end is available [here](https://github.com/talesmateus123/-latex-abnt-tcc-generator-back-end)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.

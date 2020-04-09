@@ -1,5 +1,10 @@
 # LATEX ABNT TCC GENERATIOR (FRONT-END)
-This project is an Angular CLI example, using a custom font, external image and has implementing good programming practices, As well as, code documentation, form validation, and layers abstraction, that is, abstraction of components, services, and modules. I hope to help you with this angular example.
+
+## Project information 
+### Goal 
+
+Develop tool for automatic generation of latex template according to ABNT standards (Brazilian standardization) and customized for the IFMS Corumbá campus (Mato Grosso do Sul, Brazil), based on the premise of filling out forms and updating fields such as "student name" , 'name of the course', 'title', and the other chapters of the work.
+The project back-end is available [here](https://github.com/talesmateus123/-latex-abnt-tcc-generator-back-end)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 

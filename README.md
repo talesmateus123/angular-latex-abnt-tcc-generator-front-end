@@ -1,6 +1,7 @@
-# FrontEnd
+# Currency converter project
+This project is an Angular CLI example, using a custom font, external image and has implementing good programming practices, As well as, code documentation, form validation, and layers abstraction, that is, abstraction of components, services, and modules. I hope to help you with this angular example.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
 ## Development server
 

@@ -1,0 +1,19 @@
+<h3>Informações do documento</h3>
+<br>
+<div *ngIf="document" >
+  <h3>{{document.titulo}}</h3>
+  <br>
+  <p-tabView>
+    <p-tabPanel header="Informações">
+      <!--<app-document-form [updateForm]="true" [document]="document"></app-document-form>-->
+    </p-tabPanel>
+    <!--
+      <p-tabPanel header="Conteúdo">
+        <app-partition  [document]="document"></app-partition>
+    -->
+    <p-tabPanel header="Gerar saída">
+      <!--<app-document-generate-output  [document]="document"></app-document-generate-output>-->
+    </p-tabPanel>
+  </p-tabView>
+
+</div>

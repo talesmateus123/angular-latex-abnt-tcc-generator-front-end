@@ -1,0 +1,42 @@
+
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Meus trabalhos</h3>
+  </div>
+  <div class="col-sm-6 text-right">
+    <p-button label="Novo"  routerLink="/documents/new" icon="pi pi-file" styleClass="ui-button-info"></p-button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <p-table [value]="documents">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Título</th>
+          <th>Tipo</th>
+          <th>Instituição</th>
+          <th>
+            <i class="pi pi-ellipsis-h"></i>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-document>
+        <tr routerLink="/documents/info/{{document.id}}">
+          <td>{{document.title}}</td>
+          <ng-container *ngIf="document.documentType==='monografia'">
+            <td>Monografia</td>
+          </ng-container>
+          <ng-container *ngIf="document.documentType==='artigo'">
+            <td>Artigo</td>
+          </ng-container>
+          <td>{{document.institutionInitials}}</td>
+          <td>
+            <p-button styleClass="ui-button-danger" disabled label="Excluir" ></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+

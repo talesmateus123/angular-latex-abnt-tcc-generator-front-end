@@ -19,7 +19,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TabViewModule } from 'primeng/tabview';
 //components
 import { DocumentCreateComponent } from './components/document/document-create/document-create.component';
-import { DocumentDeleteComponent } from './components/document/document-delete/document-delete.component';
 import { DocumentListComponent } from './components/document/document-list/document-list.component';
 import { DocumentComponent } from './components/document/document.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -35,7 +34,6 @@ import { PersonFormComponent } from './components/forms/person-form/person-form.
   declarations: [
     AppComponent,
     DocumentCreateComponent,
-    DocumentDeleteComponent,
     DocumentListComponent,
     FooterComponent,
     HeaderComponent,

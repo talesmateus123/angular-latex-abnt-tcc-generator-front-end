@@ -6,17 +6,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./document-generate-output.component.css']
 })
 export class DocumentGenerateOutputComponent implements OnInit {
-  @Input() private document:Document
+  @Input() public document: any;
+
   constructor() { }
 
   ngOnInit() {
-  }
-
-  generateLatex(){
 
   }
 
-  generatePdf(){
+  generateLatex() {
+
+  }
+
+  generatePdf() {
 
   }
 }

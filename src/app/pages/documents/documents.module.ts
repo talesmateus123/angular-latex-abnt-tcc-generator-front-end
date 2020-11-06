@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { AccordionModule } from 'primeng/accordion';
 import { TabMenuModule } from 'primeng/tabmenu';
@@ -18,19 +19,27 @@ import { DocumentsComponentRoutingModule } from './documents-routing.module';
 import { DocumentsComponent } from './documents.component';
 import { NewDocumentComponent } from './new';
 import { InfoDocumentComponent } from './info';
-import { DocumentService } from './shared';
+import { DocumentService, StorageService } from './shared';
+
+import { DocumentFormComponent } from './components/forms/document-form/document-form.component';
+import { PartitionComponent } from './components/partition/partition.component';
+import { DocumentGenerateOutputComponent } from './components/generate-output/document-generate-output.component';
 
 @NgModule({
   declarations: [
     DocumentsComponent,
     NewDocumentComponent,
-    InfoDocumentComponent
+    InfoDocumentComponent,
+    DocumentFormComponent,
+    PartitionComponent,
+    DocumentGenerateOutputComponent
   ],
   imports: [
     CommonModule,
     AccordionModule,
     TabMenuModule,
     ButtonModule,
+    FormsModule,
     TableModule,
     PanelMenuModule,
     EditorModule,
@@ -42,7 +51,8 @@ import { DocumentService } from './shared';
     RouterModule,
   ],
   providers: [
-    DocumentService
+    DocumentService,
+    StorageService
   ]
 })
 export class DocumentsModule { }

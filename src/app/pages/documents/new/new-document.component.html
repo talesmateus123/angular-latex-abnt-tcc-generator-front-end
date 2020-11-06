@@ -1,3 +1,9 @@
 <h3>Novo documento</h3>
 <br>
-<!--<app-document-form [createForm]="true" [document]="document"></app-document-form>-->
+<app-document-form [document]="document"></app-document-form>
+
+<div class="ui-g-12 ui-md-12">
+  <div class="ui-inputgroup" [ngStyle]="{ 'text-align': 'right' , 'float': 'right'}">
+    <p-button label="Salvar" (click)="create()" icon="pi pi-save" styleClass="ui-button-success" ></p-button>
+  </div>
+</div>

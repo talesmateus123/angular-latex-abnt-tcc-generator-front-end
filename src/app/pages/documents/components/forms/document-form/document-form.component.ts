@@ -3,29 +3,24 @@ import { DocumentService as Service } from '../../../shared';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 
+import { Document } from './../../../shared/models/document';
+
 @Component({
   selector: 'app-document-form',
   templateUrl: './document-form.component.html',
   styleUrls: ['./document-form.component.css']
 })
+
 export class DocumentFormComponent implements OnInit {
-  @Input() private document: Document;
-  @Input() private createForm: boolean;
-  @Input() private updateForm: boolean;
+  @Input() public document: Document;
 
-  private tiposDeTrabalho: SelectItem[];
-  private escolaridades: SelectItem[];
-  private tituloAcademico: SelectItem[];
+  public tiposDeTrabalho: SelectItem[];
+  public escolaridades: SelectItem[];
+  public tituloAcademico: SelectItem[];
 
-  private id: string;
-
-  constructor(private documentService: Service, private route: ActivatedRoute, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-    if (this.createForm) {
-      this.document = null;
-    }
-
     this.tiposDeTrabalho = [
       { label: 'Monografia', value: 'monografia' },
       { label: 'Artigo', value: 'artigo' }
@@ -47,18 +42,6 @@ export class DocumentFormComponent implements OnInit {
       { label: 'Doutor', value: 'doutor' }
     ];
 
-  }
-
-  create() {
-    this.documentService.createDocument(this.document);
-  }
-
-  update() {
-    this.documentService.updateDocument(this.id, this.document);
-  }
-
-  cancel() {
-    this.router.navigate(['/']);
   }
 
 }

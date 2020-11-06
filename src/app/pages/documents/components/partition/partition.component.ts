@@ -1,13 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
+import { Document } from './../../shared';
+
 @Component({
   selector: 'app-partition',
   templateUrl: './partition.component.html',
   styleUrls: ['./partition.component.css']
 })
 export class PartitionComponent implements OnInit {
-  @Input() private document: any;
+  @Input() private document: Document;
   private items: MenuItem[];
 
   constructor() { }

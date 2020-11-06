@@ -1,24 +1,39 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
+import { environment } from 'src/environments/environment';
+
+import { Document } from './../models/document';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DocumentService {
-  private url = 'http://localhost:8080/api/document';
+  private url = `${environment.baseApiUrl}/document`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private storage: StorageService) { }
 
-  getDocuments() { }
+  getAll(): Document[] {
+    return this.storage.getAll();
+  }
 
-  getDocument(id: string) { }
+  get(id: string): Document {
+    return this.storage.get(id);
+  }
 
-  createDocument(request: any) { }
+  save(document: Document) {
+    this.storage.save(document);
+  }
 
-  updateDocument(id: string, request: any) { }
+  update(id: string, document: Document) {
+    this.storage.update(id, document);
+  }
 
-  deleteDocument(id: string) { }
+  remove(id: string) {
+    this.storage.remove(id);
+  }
+
 }

@@ -21,7 +21,13 @@ export class InfoDocumentComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.document = this.service.get(this.id);
+  }
 
+  update() {
+    this.service.update(this.id, this.document);
+    this.cancel();
   }
 
   cancel() {

@@ -5,15 +5,20 @@
   <br>
   <p-tabView>
     <p-tabPanel header="Informações">
-      <!--<app-document-form [updateForm]="true" [document]="document"></app-document-form>-->
+      <app-document-form [document]="document"></app-document-form>
     </p-tabPanel>
-    <!--
-      <p-tabPanel header="Conteúdo">
-        <app-partition  [document]="document"></app-partition>
-    -->
+    <p-tabPanel header="Conteúdo">
+      <app-partition [document]="document"></app-partition>
+    </p-tabPanel>
     <p-tabPanel header="Gerar saída">
-      <!--<app-document-generate-output  [document]="document"></app-document-generate-output>-->
+      <app-document-generate-output [document]="document"></app-document-generate-output>
     </p-tabPanel>
   </p-tabView>
+
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup" [ngStyle]="{ 'text-align': 'right' , 'float': 'right'}">
+        <p-button label="Salvar" (click)="update()" icon="pi pi-save" styleClass="ui-button-success" ></p-button>
+      </div>
+    </div>
 
 </div>

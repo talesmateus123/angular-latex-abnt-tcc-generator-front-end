@@ -19,20 +19,26 @@
           <th>
             <i class="pi pi-ellipsis-h"></i>
           </th>
+          <th>
+            <i class="pi pi-ellipsis-h"></i>
+          </th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-document>
-        <tr routerLink="/documents/info/{{document.id}}">
-          <td>{{document.title}}</td>
-          <ng-container *ngIf="document.documentType==='monografia'">
-            <td>Monografia</td>
-          </ng-container>
-          <ng-container *ngIf="document.documentType==='artigo'">
-            <td>Artigo</td>
-          </ng-container>
-          <td>{{document.institutionInitials}}</td>
+        <tr>
+          <td>{{document.titulo}}</td>
+          <td>TCC</td>
+          <ng-template #outro>
+            <td>Outro</td>
+          </ng-template>
+          <td>{{document.siglaInstituicao}}</td>
+
           <td>
-            <p-button styleClass="ui-button-danger" disabled label="Excluir" ></p-button>
+            <p-button styleClass="ui-button-info" label="Editar" routerLink="/documents/info/{{document.id}}" ></p-button>
+          </td>
+
+          <td>
+            <p-button styleClass="ui-button-danger" label="Excluir" (click)="delete(document.id)" ></p-button>
           </td>
         </tr>
       </ng-template>

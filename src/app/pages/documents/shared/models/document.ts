@@ -1,0 +1,52 @@
+import { Chapter } from './chapter';
+export class Document {
+  id?: string;
+  titulo: string;
+  subTitulo: string;
+  title: string;
+  nomeAutor: string;
+  sobrenomeAutor: string;
+  nomeCidade: string;
+  ano: Date;
+  dataAprovacao: Date;
+  tipoTrabalho: string;
+  tituloAcademico?: string;
+  areaConcentracao?: string;
+  linhaPesquisa?: string;
+  nomeInstituicao: string;
+  siglaInstituicao: string;
+  campusInstituicao: string;
+  departamentoInstituicao?: string;
+  nomeCurso: string;
+  nivelEscolarCurso: string;
+  nomeOrientador?: string;
+  sobrenomeOrientador?: string;
+  nomeCoorientador?: string;
+  sobrenomeCoorientador?: string;
+  textoAbstractX?: string;
+  palavrasChaveAbstractX?: string[];
+  agradecimentos?: string;
+  dedicatoria?: string;
+  epigrafe?: string;
+  fichaCatalograficaPalavrasChave?: string[];
+  preAmbulo?: string;
+  textoResumo?: string;
+  palavrasChaveResumo?: string[];
+  // Lista em HTML com índices
+  listaSiglas?: string;
+  // Lista em HTML com índices
+  listaSimbolos?: string;
+  enabledAgradecimentos?: boolean;
+  enabledDedicatoria?: boolean;
+  enabledEpigrafe?: boolean;
+  enabledFichaCatalografica?: boolean;
+  enabledListaSiglas?: boolean;
+  enabledListaSimbolos?: boolean;
+  enabledListaTabelas?: boolean;
+  enabledListaAlgoritmos?: boolean;
+  enabledListaFiguras?: boolean;
+  enabledListaQuadros?: boolean;
+  capitulos?: Chapter[];
+  apendices?: Chapter[];
+  anexos?: Chapter[];
+}

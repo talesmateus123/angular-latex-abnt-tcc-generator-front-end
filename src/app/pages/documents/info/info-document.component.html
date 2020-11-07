@@ -10,6 +10,12 @@
     <p-tabPanel header="Conteúdo">
       <app-partition [chapters]="document.capitulos"></app-partition>
     </p-tabPanel>
+    <p-tabPanel header="Apêndices">
+      <app-partition [chapters]="document.apendices"></app-partition>
+    </p-tabPanel>
+    <p-tabPanel header="Anexos">
+      <app-partition [chapters]="document.anexos"></app-partition>
+    </p-tabPanel>
     <p-tabPanel header="Gerar saída">
       <app-document-generate-output [document]="document"></app-document-generate-output>
     </p-tabPanel>

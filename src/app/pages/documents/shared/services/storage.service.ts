@@ -63,10 +63,10 @@ export class StorageService {
       ],
       anexos: [
         {
-          titulo: 'Apendice 1'
+          titulo: 'Anexo 1'
         },
         {
-          titulo: 'Apendice 2'
+          titulo: 'Anexo 2'
         },
       ]
     }

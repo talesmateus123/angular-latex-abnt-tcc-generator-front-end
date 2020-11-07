@@ -33,4 +33,9 @@ export class PartitionComponent implements OnInit {
     }
   }
 
+  changeItemLabel() {
+    this.items[this.selectedChapter].label = this.chapters[this.selectedChapter].titulo;
+    console.log(this.chapters[this.selectedChapter]);
+  }
+
 }

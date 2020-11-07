@@ -50,7 +50,7 @@ export class StorageService {
         },
         {
           titulo: 'Capitulo 2',
-          body: '<p>Parágrafo 1</p><h1>Seção 1</h1><p>Parágrafo 1 <a href=\"https://www.google.com/\">Link</a></p><p>Parágrafo 2 <b>texto em negrito</b></p><h2>Subseção 1</h2><p>Lista ordenada:</p><ol><li>Item 1</li> <li>Item 2</li></ol>'
+          body: '<p>Parágrafo 1</p><h1>Seção 1</h1><p><table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr><tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr></table></p>'
         }
       ],
       apendices: [

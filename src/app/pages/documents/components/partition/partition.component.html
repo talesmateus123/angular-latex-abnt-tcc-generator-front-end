@@ -3,20 +3,29 @@
     <p-panelMenu [model]="items" [style]="{'width':'auto'}"></p-panelMenu>
   </div>
   <div class="col-sm-9">
-    <p *ngFor="let item of document.capitulos" >{{item.titulo}}</p>
 
-    <p-editor [(ngModel)]="document.capitulos" [style]="{'height':'400px'}">
+    <div>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-file"></i></span>
+        <input type="text" placeholder="Título" [(ngModel)]="chapters[selectedChapter].titulo" pInputText style="width: 100%;"/>
+      </div>
+    </div>
+
+    <p-editor *ngIf="chapters[selectedChapter]" [(ngModel)]="chapters[selectedChapter].body" [style]="{'height':'400px'}">
       <p-header>
         <span class="ql-format-group">
           <select class="ql-header">
-            <option value="2">Seção</option>
-            <option value="3">Subseção</option>
-            <option value="4">Sub-subseção</option>
+            <option value="1">Seção</option>
+            <option value="2">Subseção</option>
+            <option value="3">Sub-subseção</option>
+            <option value="4">Sub-sub-subseção</option>
             <option selected>Texto</option>
           </select>
         </span>
         <span class="ql-format-group">
-          <button class="ql-italic" aria-label="Língua estrangeira"></button>
+          <button class="ql-bold" aria-label="Negrito"></button>
+          <button class="ql-italic" aria-label="Itálico"></button>
+          <button class="ql-underline" aria-label="Sublinhado"></button>
         </span>
         <span class="ql-format-group">
           <button class="ql-list" value="ordered"></button>
@@ -25,9 +34,7 @@
         <span class="ql-format-group">
           <button aria-label="Url" class="ql-link"></button>
           <button aria-label="Imagem" class="ql-image"></button>
-        </span>
-        <span class="ql-format-group">
-          <p-button (click)="document.partitions=null" icon="pi pi-times"></p-button>
+
         </span>
       </p-header>
     </p-editor>

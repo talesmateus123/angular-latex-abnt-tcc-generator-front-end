@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
-import { Document } from './../../shared';
+import { Chapter } from './../../shared';
 
 @Component({
   selector: 'app-partition',
@@ -9,32 +9,28 @@ import { Document } from './../../shared';
   styleUrls: ['./partition.component.css']
 })
 export class PartitionComponent implements OnInit {
-  @Input() private document: Document;
-  private items: MenuItem[];
+  @Input() public chapters: Chapter[];
+  public selectedChapter = 0;
+
+  public items: MenuItem[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    this.items = [
-      {
-        label: 'Capítulo 1',
-        items: [
-          {
-            label: 'Seção 1',
-          },
-          {
-            label: 'Seção 2',
-            items: [
-              {
-                label: 'Subseção 1'
-              }
-            ]
-          }
-          //{separator: true}
-          //{label: 'Quit', icon: 'pi pi-fw pi-times'}
-        ]
+    this.items = this.chapters.map(document => {
+      return {
+        label: document.titulo,
+        command: (event) => { this.selectChapter(event.item.label); }
+      };
+    });
+  }
+
+  selectChapter(label: string) {
+    for (let i = 0; i < this.chapters.length; i++) {
+      if (this.chapters[i].titulo === label) {
+        this.selectedChapter = i;
       }
-    ]
+    }
   }
 
 }

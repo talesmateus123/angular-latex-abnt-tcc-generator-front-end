@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { DocumentService as Service } from '../shared/services/document.service';
+
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { DocumentService as Service } from '../shared/services/document.service';
+import { Document } from './../shared/models/document';
 
 @Component({
   selector: 'app-info-document',
@@ -11,7 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class InfoDocumentComponent implements OnInit {
   private items: MenuItem[];
 
-  public document: any;
+  public document: Document;
   private id: string;
 
   constructor(
